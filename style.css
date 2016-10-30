@@ -1,48 +1,43 @@
 body{
-	background-color: #1abc9c;
-	font-family: 'PT Sans Narrow', sans-serif;
+	background-color: #FAFAFA;
+	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	text-align: center;
     padding: 0px;
     overflow-x: hidden;
 }
-.box{
-	width: 30%;
-	margin:0 auto;
-	background-color: #ecf0f1;
-	font-size: 1.4em;
-	padding-top: 2%;
-	padding-bottom: 2%;
-	margin-top: 5%;
-	border-radius: 5px;
-}
 .circle{
-	width: 5em;
-	height: 5em;
+	width: 15em;
+	height: 15em;
 	background-color: #fff;
 	border-radius: 50%;
 	margin:0 auto;
 }
 .title-name{
 	margin-top: 5%;
-	color: #e67e22;
-	font-weight: 700;
-}
-.social-media-icons ul{
-	padding: 0;
-}
-.social-media-icons ul li{
-	display: inline;
-	width: 30%;
+	font-weight: 100;
+	font-size: 1.8em;
+	letter-spacing: 0.1em;
 }
 .title-desc{
-	font-size: 0.9em;
+	font-family: 'Lato', sans-serif;
+	margin-top: 0.9%;
+	font-size: 1.1em;
+	color: #595959;
 }
-.circle1{
-	width: 4em;
-	height: 4em;
-	background-color: #fff;
-	border-radius: 50%;
-	display: inline-block;
-
+.container{
+	position: absolute;
+	left: 50%;
+	top: 42%;
+	transform: translate(-50%,-50%);
+}
+i{
+	padding:10px;
+	padding-top: 0;
+	padding-bottom: 0;  
+	transition: all 0.2s;
+}
+.social :hover{
+	transform: scale(1.5);
+	transition: all 0.2s;
 }
