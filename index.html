@@ -3,9 +3,9 @@
 	<head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Mohsin Hussain</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:500|Roboto:100,300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:500|Roboto:100,300|Montserrat:200,400" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -15,19 +15,121 @@
           ga('create', 'UA-86529448-1', 'auto');
           ga('send', 'pageview');
 
+          
+
         </script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 
 	<body>
-    <div class="container">
-    	<div class="circle"><img src="pic.jpg"></img></div>
-    	<div class="title-name">Mohammed Mohsin Hussain</div>
-    	<div class="title-desc">Budding Web Developer</div>
-        <div class="social" style="margin-top: 5%">
-            <a href="https://www.facebook.com/Darth.Nis.Hom"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/mohsin-hussain/"><i class="fa fa-linkedin"></i></a>
-        </div>
-    </div>
+
+
+
+
+          <nav class="navbar navbar-expand-lg navbar-dark desk bg-dark">
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse"  id="navbarNavAltMarkup">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                  </ul>
+            </div>
+        </nav>
+
+        <section id="intro">
+            <div class="bg-svg"></div>
+            <div class="container">
+                
+                <div class="title-name">Hello, I am <span class="span-name">Mohsin Hussain</span></div>
+                <div class="title-desc"><span class="wrap"></span> </div>
+                <div class="social" style="margin-top: 5%">
+                    <div class="icon-box"><a href="https://github.com/nukex1122"><i class="fa fa-github circle-icon"  style="color: #32353A;font-size: 1.2em;"></i></a></div>
+                    <div class="icon-box"><a href="#"><i class="fa fa-instagram circle-icon"  style="color: #32353A;font-size: 1.2em;"></i></a></div>
+                    <div class="icon-box"><a href="https://www.linkedin.com/in/mohsin-hussain/"><i class="fa fa-linkedin circle-icon"  style="color: #32353A;font-size: 1.2em;"></i></a></div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            var descriptions = ["full stack web developer", "software engineer", "deep learning enthusiast", "dce 2020"];
+
+            var startRotate = function(){
+                this.loop_idx = 0;
+                var i=0;
+                this.txt = "";
+
+                this.typewriter = function(){
+                    var that = this;
+                    if(i<this.txt.length){
+                        document.getElementsByClassName("wrap")[0].innerHTML+=this.txt.charAt(i);    
+                        i++;
+                        setTimeout(function(){
+                            that.typewriter()
+                        }, 60);
+                    }else{
+                        setTimeout(function(){
+                            that.delete()
+                        }, 1600);
+                    }
+                }
+                this.delete = function(){
+                    var that = this;
+                    if(i>0){
+                        document.getElementsByClassName("wrap")[0].innerHTML=this.txt.substring(0,i-1);    
+                        i--;
+                        setTimeout(function(){
+                            that.delete()
+                        }, 35);
+                    }else{
+                        setTimeout(function(){
+                            document.getElementsByClassName("wrap")[0].innerHTML="";
+                            that.loop_idx++;
+                            i=0;
+                            that.nextRotate();
+                        },1000)
+                    }
+                }
+                this.nextRotate = function (){
+                    var desc_index = this.loop_idx%descriptions.length;
+                    var desc = descriptions[desc_index];
+                    this.txt = desc;
+                    var that = this;
+                    // console.log('in this')
+                    // console.log(this.txt)
+                    this.typewriter()
+                    
+                }
+                this.nextRotate();
+            }
+
+            new startRotate()
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".title-desc > .wrap { padding:0 0.2em; border-right: 0.08em solid #EF3F55 }";
+            document.body.appendChild(css);
+            
+        </script>
 	</body>
 </html>
