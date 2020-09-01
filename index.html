@@ -3,7 +3,7 @@
 	<head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Mohsin Hussain</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:500|Roboto:100,300|Montserrat:200,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,500|Roboto:100,300|Montserrat:100,200,300,400" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		
         <script>
@@ -30,9 +30,9 @@
 	<body>
 
 
+        <div id="particles-js"></div>
 
-
-          <nav class="navbar navbar-expand-lg navbar-dark desk bg-dark">
+          <nav class="navbar navbar-expand-lg navbar-dark desk">
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -57,9 +57,24 @@
                   </ul>
             </div>
         </nav>
-
+        
         <section id="intro">
             <div class="bg-svg"></div>
+            <!-- Uncomment to bring lava lamp and also add the lavalamp css -->
+            <!-- <div class="area" >
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+            </div > -->
             <div class="container">
                 
                 <div class="title-name">Hello, I am <span class="span-name">Mohsin Hussain</span></div>
@@ -70,10 +85,124 @@
                     <div class="icon-box"><a href="https://www.linkedin.com/in/mohsin-hussain/"><i class="fa fa-linkedin circle-icon"  style="color: #32353A;font-size: 1.2em;"></i></a></div>
                 </div>
             </div>
-        </section>
 
+
+        </section>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <script>
-            var descriptions = ["full stack web developer", "software engineer", "deep learning enthusiast", "dce 2020"];
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                    "value": 355,
+                    "density": {
+                        "enable": true,
+                        "value_area": 789.1476416322727
+                    }
+                    },
+                    "color": {
+                    "value": "#ffffff"
+                    },
+                    "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                    },
+                    "opacity": {
+                    "value": 0.3,
+                    "random": false,
+                    "anim": {
+                        "enable": true,
+                        "speed": 0.2,
+                        "opacity_min": 0,
+                        "sync": false
+                    }
+                    },
+                    "size": {
+                    "value": 2.2,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1.5,
+                        "size_min": 0,
+                        "sync": false
+                    }
+                    },
+                    "line_linked": {
+                    "enable": false,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                    },
+                    "move": {
+                    "enable": true,
+                    "speed": 0.5,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "bubble"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                    },
+                    "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                        "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 83.91608391608392,
+                        "size": 1,
+                        "duration": 3,
+                        "opacity": 1,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                    }
+                },
+                "retina_detect": true
+            });
+        </script>
+        <script>
+            var descriptions = ["full stack web developer", "software engineer", "freelancer", "designer", "deep learning enthusiast", "dce 2020"];
 
             var startRotate = function(){
                 this.loop_idx = 0;
@@ -87,7 +216,7 @@
                         i++;
                         setTimeout(function(){
                             that.typewriter()
-                        }, 60);
+                        }, 60  + Math.random() * 10 - 5);
                     }else{
                         setTimeout(function(){
                             that.delete()

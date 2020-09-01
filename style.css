@@ -8,7 +8,7 @@
   }
 
 body{
-	background-color: #32353A;
+	background-color: #262A34;
 	color:#fff;
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
@@ -19,10 +19,10 @@ body{
 }
 
 nav{
-	background: #232528;
-	border-bottom: 2px solid #45BEA9;
-	padding-top: 1.1em !important;
-	padding-bottom: 1.1em !important;
+	background-color: #232528 !important;
+	/* border-bottom: 2px solid #45BEA9; */
+	padding-top: 1.0em !important;
+	padding-bottom: 1.0em !important;
 	z-index: 99;
 	text-align: left;
 	color: #fff;
@@ -40,9 +40,9 @@ nav{
 	cursor: pointer;
 	display: inline-block;
 	margin: 0 30px;
-	font-family: 'Lato', sans-serif;
-	font-weight: 200;
-	font-size: 1.1em;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
 	transition: all 0.2s;
 	color: #fff !important;
 }
@@ -51,8 +51,8 @@ nav{
 	transition: all 0.2s;
 }
 .active{
-	color: #45BEA9 !important;
-	font-weight: 500;
+	color: #EF3F55 !important;
+	/* font-weight: 700; */
 }
 .circle{
 	width: 15em;
@@ -67,7 +67,8 @@ nav{
 	border-radius: 50%;
 }
 .title-name{
-	font-family: adamCGPro;
+	font-family: 'Lato', sans-serif;
+	font-weight: 200;
 	margin-top: 5%;
 	font-size: 2.7em;
 }
@@ -75,7 +76,9 @@ nav{
 	color: #EF3F55;
 }
 .title-desc{
-	font-family: chalkduster;
+	/* font-family: chalkduster; */
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
 	margin-top: 1%;
 	font-size: 1.8em;
 	min-height: 1.4em;
@@ -83,8 +86,8 @@ nav{
 .container{
 	position: absolute;
 	left: 50%;
-	top: 55%;
-	transform: translate(-50%,-55%);
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
 
 .bg-svg{
@@ -93,7 +96,7 @@ nav{
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-image: url(bgs/bg.svg);
+	/* background-image: url(bgs/bg.svg); */
 	background-position: center; 
 	background-size:cover;
 	opacity: 0.5;
@@ -113,7 +116,7 @@ nav{
 }
 
 .icon-box :hover{
-	transform: scale(1.2);
+	transform: scale(1.1);
 	transition: all 0.2s;
 }
 
@@ -130,3 +133,30 @@ nav{
 	line-height: 1.4em;
     border-radius: 50%;
 }
+
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+#particles-js {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0 !important;
+  }
