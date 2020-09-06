@@ -337,7 +337,7 @@ nav{
   
 @media screen and (max-width: 600px){
 	.timeline ul li{
-		margin-left: 20px;
+		margin-left: 15px;
 	}
 
 	.timeline ul li .content{
@@ -346,6 +346,11 @@ nav{
 
 	.timeline ul li:nth-child(even) .content {
 		left: 45px;
+	}
+
+	.timeline h1{
+		border-bottom-left-radius: 0;
+
 	}
 }
 
