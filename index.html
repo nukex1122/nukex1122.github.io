@@ -3,7 +3,7 @@
 	<head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Mohsin Hussain</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,500|Roboto:100,300|Montserrat:100,200,300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500|Roboto:100,300|Montserrat:100,200,300,400,500" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		
         <script>
@@ -32,7 +32,7 @@
 
         <div id="particles-js"></div>
 
-          <nav class="navbar navbar-expand-lg navbar-dark desk">
+        <nav class="navbar navbar-expand-lg navbar-dark desk sticky-top">
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -40,19 +40,19 @@
             <div class="collapse navbar-collapse"  id="navbarNavAltMarkup">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                      <a class="nav-link active" href="#">Home</a>
+                      <a class="nav-link active" href="#particles-js">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
+                      <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Experience</a>
+                      <a class="nav-link" href="#timeline">Experience</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                   </ul>
             </div>
@@ -75,7 +75,7 @@
                         <li></li>
                 </ul>
             </div > -->
-            <div class="container">
+            <div class="container-center">
                 
                 <div class="title-name">Hello, I am <span class="span-name">Mohsin Hussain</span></div>
                 <div class="title-desc"><span class="wrap"></span> </div>
@@ -88,6 +88,77 @@
 
 
         </section>
+        
+        <section id="about">
+            <div class="container center">
+                <div class="row">
+                    <div class="about-intro">
+                        <h1>Hi.</h1>
+                        <p>I’m Mohsin, a web developer based out of Delhi, India. I love thinking and applying my thoughts to various fields. I am a full stack developer and making beautiful, performant and scalable applications is what I adore. </p>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-4 offset-sm-4 resume-box slide">
+                    <a href="#" target="_blank">View My Resume</a>
+                </div>
+                <div class="line" style="margin-top: 4em;opacity: 0.5;"></div>
+            </div>
+        </section>
+        
+        <!-- TODO: Could add Company Logos as well -->
+        <section id="timeline">
+            <div class="container center">
+                <div class="timeline">
+                    <div class="col-10 col-sm-3" style="margin: 0 auto;">
+                        <h1>Experience</h1>
+                    </div>
+                    <ul style="padding:0">
+                        <li>
+                            <div class="content">
+                                <h5>Qualcomm - <span class="title">Software Engineer</span></h5>
+                                <p class="date">Jun 2020 - Present</p>
+                                <div class="line" style="width: 90%; margin: -4px 0 10px 0 ;opacity: 0.4;"></div>
+                                <p>Working in the XR Department to create features for split rendering stack for XR/AR viewers.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content">
+                                <h5>American Express - <span class="title">SDE Intern</span></h5>
+                                <p class="date">May 2019 - July 2019</p>
+                                <div class="line" style="width: 90%; margin: -4px 0 10px 0 ;opacity: 0.4;"></div>
+                                <p>Worked in the GCP(Global Client Profitability) Department and revamped the platform to calculate Membership Points for corporate clients as a POC.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content">
+                                <h5>Nokia Networks - <span class="title">SDE Intern</span></h5>
+                                <p class="date">May 2018 - July 2018</p>
+                                <div class="line" style="width: 90%; margin: -4px 0 10px 0 ;opacity: 0.4;"></div>
+                                <p>Worked in the GDC department to build a web application which automated parsing of the input data using NLP from network dumps from various sites.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content">
+                                <h5>Delhi College of Engineering(DCE)</span></h5>
+                                <p class="date">Aug 2016 - Jun 2020</p>
+                                <div class="line" style="width: 90%; margin: -4px 0 10px 0 ;opacity: 0.4;"></div>
+                                <p>Completed my Engineering with a B. Tech. Degree in Electronics and Communication Engineering.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+
+        </section>
+
+        <section id="contact">
+            <div class="container-responsive">
+                <div class="footer">
+                    Made with <span style="color: #e25555;">&#9829;</span> by Mohsin
+                </div>
+            </div>
+        </section>
+
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <script>
             particlesJS("particles-js", {
